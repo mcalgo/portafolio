@@ -1,34 +1,56 @@
 name: Deploy to GitHub Pages
 
+# ⚡ Cuándo se ejecuta este "robot"
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches: ["main"]  # Cada vez que hagas push a la rama main
+  workflow_dispatch:    # También puedes ejecutarlo manualmente
 
+# 🔐 Permisos que necesita
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 🚫 Solo un deployment a la vez
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+# 📋 Las tareas que hace el "robot"
 jobs:
-  build-and-deploy:
+  # Tarea 1: Compilar tu código
+  build:
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+      - name: 📥 Descargar tu código
+        uses: actions/checkout@v4
+        
+      - name: 🟢 Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          
+      - name: 📦 Instalar dependencias
+        run: npm ci
+        
+      - name: 🏗️ Compilar con Next.js
+        run: npm run build
+        
+      - name: 📤 Subir archivos compilados
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-        cache: 'npm'
-
-    - name: Install dependencies
-      run: npm ci --legacy-peer-deps
-
-    - name: Build project
-      run: npm run build
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/main'
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./out
+  # Tarea 2: Publicar en GitHub Pages
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build  # Espera a que termine la compilación
+    steps:
+      - name: 🚀 Publicar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
