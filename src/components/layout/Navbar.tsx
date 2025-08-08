@@ -84,7 +84,7 @@ export default function Navbar() {
               }}
               className="text-xl font-bold text-foreground hover:text-primary transition-colors"
             >
-              {"<Dev />"}
+              {"<SA />"}
             </a>
           </motion.div>
 
