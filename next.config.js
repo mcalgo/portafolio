@@ -8,6 +8,8 @@ const nextConfig = {
   // Configuración para GitHub Pages (export estático)
   output: 'export',
   trailingSlash: true,
+  basePath: '/portafolio',
+  assetPrefix: '/portafolio/',
   images: {
     unoptimized: true
   },

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "open source", "github", "portfolio developer", "software engineer colombia",
     "senior developer", "tech lead", "consultor tecnológico"
   ],
-  authors: [{ name: "Sebastián Arévalo", url: "https://mcalgo.github.io" }],
+  authors: [{ name: "Sebastián Arévalo", url: "https://mcalgo.github.io/portafolio" }],
   creator: "Sebastián Arévalo",
   publisher: "Sebastián Arévalo",
   formatDetection: {
@@ -41,24 +41,24 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://mcalgo.github.io"),
+  metadataBase: new URL("https://mcalgo.github.io/portafolio"),
   alternates: {
-    canonical: "https://mcalgo.github.io",
+    canonical: "https://mcalgo.github.io/portafolio",
     languages: {
-      "es-ES": "https://mcalgo.github.io",
-      "en-US": "https://mcalgo.github.io/en"
+      "es-ES": "https://mcalgo.github.io/portafolio",
+      "en-US": "https://mcalgo.github.io/portafolio/en"
     }
   },
   openGraph: {
     title: "Sebastián Arévalo - Full Stack Developer | C# Python .NET Expert",
     description: "Desarrollador Full Stack con 7+ años de experiencia. Especialista en C#, Python, .NET Core, APIs escalables y arquitectura de software. Portfolio profesional con proyectos open-source.",
-    url: "https://mcalgo.github.io",
+    url: "https://mcalgo.github.io/portafolio",
     siteName: "Sebastián Arévalo - Portfolio",
     locale: "es_ES",
     type: "website",
     images: [
       {
-        url: "https://mcalgo.github.io/images/og-image.png",
+        url: "https://mcalgo.github.io/portafolio/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Sebastián Arévalo - Full Stack Developer Portfolio"
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sebastián Arévalo - Full Stack Developer | C# Python Expert",
     description: "Desarrollador Full Stack con 7+ años de experiencia en C#, Python, .NET. Especialista en APIs escalables y arquitectura de software. ¡Explora mi portfolio!",
-    images: ["https://mcalgo.github.io/images/twitter-card.png"],
+    images: ["https://mcalgo.github.io/portafolio/images/twitter-card.png"],
     creator: "@sebastián_dev"
   },
   robots: {
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
   applicationName: "Sebastián Arévalo Portfolio",
   appLinks: {
     web: {
-      url: "https://mcalgo.github.io",
+      url: "https://mcalgo.github.io/portafolio",
       should_fallback: true
     }
   }
@@ -106,24 +106,20 @@ export default function RootLayout({
     <html lang="es" className="scroll-smooth">
       <head>
         {/* Favicons */}
-        <link rel="icon" href="/favicon.ico" sizes="32x32" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/portafolio/favicon.ico" sizes="32x32" />
+        <link rel="icon" href="/portafolio/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/portafolio/apple-touch-icon.png" />
+        <link rel="manifest" href="/portafolio/manifest.json" />
         
         {/* PWA Meta Tags */}
         <meta name="theme-color" content="#0f172a" />
         <meta name="msapplication-TileColor" content="#0f172a" />
-        <meta name="msapplication-config" content="/browserconfig.xml" />
+        <meta name="msapplication-config" content="/portafolio/browserconfig.xml" />
         
         {/* Additional SEO Meta Tags */}
         <meta name="geo.region" content="CO" />
         <meta name="geo.placename" content="Colombia" />
         <meta name="ICBM" content="4.7110, -74.0721" />
-        
-        {/* Verification Tags (add your actual verification codes) */}
-        {/* <meta name="google-site-verification" content="your-google-verification-code" /> */}
-        {/* <meta name="msvalidate.01" content="your-bing-verification-code" /> */}
         
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
