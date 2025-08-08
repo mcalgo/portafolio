@@ -1,0 +1,48 @@
+{
+  "name": "Sebastián Arévalo - Portfolio",
+  "short_name": "S. Arévalo Portfolio",
+  "description": "Portfolio profesional de Sebastián Arévalo, Full Stack Developer especializado en C#, Python y .NET",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "orientation": "portrait-primary",
+  "categories": ["portfolio", "developer", "technology"],
+  "lang": "es-ES",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png", 
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-mobile.png", 
+      "sizes": "428x926",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}

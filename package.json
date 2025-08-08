@@ -1,0 +1,42 @@
+{
+  "name": "projects",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:obfuscated": "NODE_ENV=production next build",
+    "build:analyze": "ANALYZE=true next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next build",
+    "export:obfuscated": "NODE_ENV=production next build",
+    "preview": "next build && next start"
+  },
+  "dependencies": {
+    "ai": "^4.3.19",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.11",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.1",
+    "lucide-react": "^0.532.0",
+    "next": "15.4.4",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "tailwind-merge": "^3.3.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@next/bundle-analyzer": "^15.4.5",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.4",
+    "javascript-obfuscator": "^4.1.1",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "webpack-obfuscator": "^3.5.1"
+  }
+}
